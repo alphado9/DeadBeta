@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} — Dead Beta{% else %}Dead Beta{% endif %}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}Analysis, failures, ideas, wins, losses, and failed experiments. Always open to being wrong.{% endif %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="/" class="wordmark">dead<span>beta</span></a>
+      <div class="nav-links">
+        <a href="/about">about</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-mark">dead<span>beta</span></span>
+      <span class="footer-sub">analysis, experiments, and open failures</span>
+    </div>
+  </footer>
+</body>
+</html>
